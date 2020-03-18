@@ -11,6 +11,6 @@ app.get('/sale', (req, res) => res.send('Sale product 1'));
 app.get('/user', (req, res) => res.send('{"user_id" : 1, "username" : "john", "password" : "123456"}'));
 
 app.get('/currency', (req, res) => res.send(common.getCurrency()));
-app.get('/discount-rate', (req, res) => res.send(10));
+app.get('/discount-rate', (req, res) => res.send(common.getTaxRate()));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
